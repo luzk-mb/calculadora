@@ -27,6 +27,7 @@ function realizarOperacion(num1, num2, operacion) {
 
     return resultado;
 }
+
 // Paso 4: Bucle para realizar múltiples operaciones
 let continuar = true;
 
