@@ -44,11 +44,20 @@ while (continuar) {
     alert("Resultado: " + resultado);
 
     // Preguntar al usuario si desea realizar otra operación
-    let respuesta = prompt("¿Desea realizar otra operación? (sí/no):").toLowerCase();
+    let respuesta = prompt("¿Desea realizar otra operación? (sí/no):");
 
-    // Si el usuario ingresa 'no', se termina el bucle
-    if (respuesta === "no" || respuesta === "salir") {
+    // Verificar si el usuario ha ingresado algo
+    if (respuesta === null) {
         alert("¡Gracias por usar la calculadora!");
-        continuar = false;
+        continuar = false;  // Terminar el bucle si el usuario cancela
+    } else {
+        // Convertir la respuesta a minúsculas solo si no es null
+        respuesta = respuesta.toLowerCase();
+        
+        // Si el usuario ingresa 'no' o 'salir', terminar el bucle
+        if (respuesta === "no" || respuesta === "salir") {
+            alert("¡Gracias por usar la calculadora!");
+            continuar = false;
+        }
     }
 }
